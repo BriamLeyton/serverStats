@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <i class="fas fa-server"></i>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap.css">
+
+    <title>Hello, briam!</title>
+</head>
+
+<body>
+    <div class="container">
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 didplay-4">Server Stats</span>
+    </nav>
+    <br>
+
+        <div class="row">
+            <div class="container-fluid">
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card-body">
+                                <h1 class="display-4">Server Info</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-group">
+                                <div class="col-md-12">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cpu model</h5>
+                                        <h3 id="cpumodel">--</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">OS</h5>
+                                        <h3 id="os">--</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Cpu Count</h5>
+                                        <h3 id="cpucount">--</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Platform</h5>
+                                        <h3 id="platform">--</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Uptime</h5>
+                                        <h3 id="uptime">--</h3>
+                                    </div>
+                                </div>
+                                
+
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Drive</h5>
+                                        <p class="d-inline-block" >Total: <mark id="driveTotal">--</mark> Free: <mark id="driveFree">--</mark> Used: <mark id="driveUsed">--</mark>  </p> 
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card-body">
+                                <h1 class="display-4">General</h1>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-body">
+                                <canvas height="250rem" id="cpuGen"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-body">
+                                <canvas height="250rem" id="ramGen"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card-body">
+                                <canvas height="250rem" id="driveGen"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card-body">
+                                <h1 class="display-4">CPU Usage</h1>
+                                <h3 id="cpuStats">--</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <canvas height="200rem" id="cpu"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="card mb-3">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="card-body">
+                                <h1 class="display-4">Ram Usage</h1>
+                                <h3 id="ramStats">--</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <canvas height="200rem" id="ram"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/chart.min.js"></script>
+    <script src="/index.js">
+
+    </script>
+</body>
+
+</html>
