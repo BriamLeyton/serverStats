@@ -42,6 +42,13 @@ setInterval(() => {
         values.forEach(k => {
             Object.assign(data, k)
        })
+       if (data.net == 'not supported') {
+           
+           data.net = {total: {inputMb: 0, outputMb:0}}
+           console.log(data)
+       }else{
+
+       }
         //console.log(data)
         io.emit("data", data)
     });
