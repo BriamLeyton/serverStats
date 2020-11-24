@@ -66,7 +66,17 @@ var netin = new Chart(netin, {
             data: [0]
         }]
     },
-    options: options
+    options:  {scales: {
+        yAxes: [{
+            ticks: {
+                max: 10,
+                min: 0,
+                stepSize: 1,
+                
+            }
+        }],
+        xAxes: [{ ticks: { autoSkip: true, maxTicksLimit: 20 } }]
+    }}
 });
 
 var netout = new Chart(netout, {
@@ -80,7 +90,17 @@ var netout = new Chart(netout, {
             data: [0]
         }]
     },
-    options: options
+    options:  {scales: {
+        yAxes: [{
+            ticks: {
+                max: 10,
+                min: 0,
+                stepSize: 1,
+                
+            }
+        }],
+        xAxes: [{ ticks: { autoSkip: true, maxTicksLimit: 20 } }]
+    }}
 });
 
 var cpuGeneral = new Chart(cpuGen, {
@@ -160,8 +180,8 @@ let update = (serverStats) => {
     driveGeneral.update()
     
     
-    document.getElementById("netStatsin").innerHTML = serverStats.net.total.inputMb
-    document.getElementById("netStatsout").innerHTML = serverStats.net.total.outputMb
+    document.getElementById("netStatsin").innerHTML = (serverStats.net.total.inputMb*100)
+    document.getElementById("netStatsout").innerHTML = (serverStats.net.total.outputMb*100)
     
     addData(netin, i++, serverStats.net.total.inputMb)
     addData(netout, i++, serverStats.net.total.outputMb)
