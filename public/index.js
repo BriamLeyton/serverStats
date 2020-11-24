@@ -60,7 +60,7 @@ var netin = new Chart(netin, {
     data: {
         labels: [label],
         datasets: [{
-            label: 'Ram Usage  History',
+            label: 'Net Usage in History',
             backgroundColor: 'rgb(50, 99, 132)',
             borderColor: 'rgb(50, 99, 132)',
             data: [0]
@@ -84,7 +84,7 @@ var netout = new Chart(netout, {
     data: {
         labels: [label],
         datasets: [{
-            label: 'Ram Usage  History',
+            label: 'Net Usage out History',
             backgroundColor: 'rgb(50, 99, 132)',
             borderColor: 'rgb(50, 99, 132)',
             data: [0]
